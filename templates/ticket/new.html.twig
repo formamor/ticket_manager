@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau ticket{% endblock %}
+
+{% block body %}
+    <h1>Soumettre un nouveau ticket</h1>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+
+    {% include 'ticket/_form.html.twig' %}
+{% endblock %}
